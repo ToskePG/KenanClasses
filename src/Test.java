@@ -1,6 +1,24 @@
 import java.util.*;
 
 public class Test {
+	
+	
+	// Za uneseni broj n da vraca zbir prvih n brojva (npr ako je n=5, treba vratiti 15 jer je 5+4+3+2+1 = 15)
+	public static int zbirPrvihNBrojeva(int n) {
+		int zbir = 0;
+		for(int i=1; i<=n; i++) {
+			zbir = zbir + i;
+		}
+		return zbir;
+	}
+	
+	// Ako je a vece od 10 vrati recenicu A je vece od 10, u suportnom vrati rijec false
+	public static String vratiRijec(int a) {
+		if(a > 10) {
+			return "A je vece od 10";
+		}
+		return "False";
+	}
 
 	public static void maxNumber(int a, int b, int c) {
 		// Najveci od tri broja, bez ponavljanja
@@ -46,25 +64,9 @@ public class Test {
 		
 		Scanner input = new Scanner(System.in);
 		
-		// Najveci od tri broja, sa ponavljanjem
-		System.out.println("Unesi prvi cijeli broj");
-		int a = input.nextInt();
-		System.out.println("Unesi drugi cijeli broj");
-		int b = input.nextInt();
-		System.out.println("Unesi treci cijeli broj");
-		int c = input.nextInt();
-		
-		maxNumber(a, b, c);
-		
-		System.out.println("Unesi prvi cijeli broj");
-		int d = input.nextInt();
-		System.out.println("Unesi drugi cijeli broj");
-		int e = input.nextInt();
-		System.out.println("Unesi treci cijeli broj");
-		int f = input.nextInt();
-				
-		maxNumber(d, e, f);
-		
+		String s = vratiRijec(14);
+		System.out.println(s);
+		System.out.println(zbirPrvihNBrojeva(5));
 		input.close();
 		
 		
