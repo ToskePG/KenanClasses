@@ -33,7 +33,13 @@ public class Test {
 	
 	// Ako je broj a veci od 10 ostampaj rezultat b+c*d, ako je a tacno 10 ostampaj b+c+d, u ostalim slucajevima ostampaj rezultat b*c*d
 	public static void rezultat(int a, int b, int c, int d) {
-		
+		if(a>10) {
+			System.out.println(a+c*d);
+		}else if(a == 10) {
+			System.out.println(b+c+d);
+		}else {
+			System.out.println(b*c*d);
+		}
 	}
 	
 	public static void main(String[] args) {
