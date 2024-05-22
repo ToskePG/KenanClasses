@@ -2,7 +2,6 @@ import java.util.*;
 
 public class Test {
 	
-	
 	// Za uneseni broj n da vraca zbir prvih n brojva (npr ako je n=5, treba vratiti 15 jer je 5+4+3+2+1 = 15)
 	public static int zbirPrvihNBrojeva(int n) {
 		int zbir = 0;
@@ -64,11 +63,66 @@ public class Test {
 		
 		Scanner input = new Scanner(System.in);
 		
-		String s = vratiRijec(14);
-		System.out.println(s);
-		System.out.println(zbirPrvihNBrojeva(5));
+		// String s = vratiRijec(14);
+		// System.out.println(s);
+		// System.out.println(zbirPrvihNBrojeva(5));
+		//prvihPetBrojeva();
+		//System.out.println("Unesi neki broj:");
+		//int a = input.nextInt();
+		//System.out.println("Prvih " +a  +" brojeva je: ");
+		//System.out.println("");
+		//prvihNbrojeva(a);
+		//unazad();
+		System.out.println(zbirBrojeva(4));
 		input.close();
-		
-		
 	}
+	
+	public static void prvihPetBrojeva() {
+		for(int i = 1; i<=5; i++) {
+			System.out.println(i);
+		}
+	}
+	
+	public static void prvihNbrojeva(int n) {
+		for(int i = 1; i<= n; i++) {
+			System.out.println(i);
+		}
+	}
+	
+	public static void unazad() {
+		for(int i = 5; i>=1; i--) {
+			System.out.println(i);
+		}
+	}
+	
+	public static void parniBrojevi(int n) {
+		for(int i = 1; i <= n; i++) {
+			if(i%2==0) {
+				System.out.println(i);
+			}
+		}
+	}
+	
+	public static int zbirBrojeva(int n) {
+		int zbir = 0;
+		for(int i = 0; i<=n; i++) {
+			zbir = zbir+i;
+		}
+		return zbir;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
