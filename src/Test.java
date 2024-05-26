@@ -73,7 +73,22 @@ public class Test {
 		//System.out.println("");
 		//prvihNbrojeva(a);
 		//unazad();
-		System.out.println(zbirBrojeva(4));
+		//System.out.println(zbirBrojeva(4));
+		
+		int[] nizBrojeva = new int[5];
+		
+		for(int i = 0; i <= nizBrojeva.length-1; i++) {
+			System.out.println("Unesi " +(i+1) +". clan niza: ");
+			nizBrojeva[i] = input.nextInt();
+		}
+		
+		printArray(nizBrojeva);
+		
+		System.out.println("Zbir brojeva u nizu je: ");
+		
+		System.out.println(zbirBrojevaUNizu(nizBrojeva));
+		
+		
 		input.close();
 	}
 	
@@ -111,6 +126,21 @@ public class Test {
 		return zbir;
 	}
 	
+	public static void printArray(int[] niz) {
+		for(int i=0; i<=niz.length-1; i++) {
+			System.out.println((i+1) +". clan niza je: ");
+			System.out.println(niz[i]);
+		}
+		System.out.println("");
+	}
+	
+	public static int zbirBrojevaUNizu(int[] niz) {
+		int zbir = 0;
+		for(int i=0; i<=niz.length-1; i++) {
+			zbir = zbir + niz[i];
+		}
+		return zbir;
+	}
 }
 
 
