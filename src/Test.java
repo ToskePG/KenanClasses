@@ -251,6 +251,16 @@ public class Test {
 			}
 			return brojac;
 		}
+		
+		public static int zbirNeparnihPozicija(int[] niz) {
+			int zbir = 0;
+			for(int i=0; i<=niz.length; i++) {
+				if(i%2!=0) {
+					zbir= zbir+ niz[i];
+				}
+			}
+			return zbir;
+		}
 }
 
 
