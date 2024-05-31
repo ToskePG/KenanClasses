@@ -17,20 +17,48 @@ public class Test {
 		// prvihNbrojeva(a);
 		// unazad();
 		// System.out.println(zbirBrojeva(4));
+		// int[] nizBrojeva = new int[5];
+		// printArray(nizBrojeva);
+		// System.out.println("Zbir brojeva u nizu je: ");
+		// System.out.println(zbirBrojevaUNizu(nizBrojeva));
 		
-		int[] nizBrojeva = new int[5];
 		
-		for(int i = 0; i <= nizBrojeva.length-1; i++) {
-			System.out.println("Unesi " +(i+1) +". clan niza: ");
-			nizBrojeva[i] = input.nextInt();
-		}
+		// Auto a1 = new Auto();
 		
-		printArray(nizBrojeva);
+		// System.out.println(a1);
 		
-		System.out.println("Zbir brojeva u nizu je: ");
+		// a1.godiste = 2005;
 		
-		System.out.println(zbirBrojevaUNizu(nizBrojeva));
+		// System.out.println(a1);
 		
+		System.out.println("Unesi godiste auta: ");
+		int godiste = input.nextInt();
+		input.nextLine();
+		System.out.println("Unesi model auta: ");
+		String model = input.nextLine();
+		System.out.println("Unesi marku auta: ");
+		String marka = input.nextLine();
+		System.out.println("Unesi tip menjaca auta: ");
+		String tipMenjaca = input.nextLine();
+		System.out.println("Unesi kilometrazu auta: ");
+		double kilometraza = input.nextDouble();
+		System.out.println("Unesi cijenu auta: ");
+		double cijena = input.nextDouble();
+		
+		
+		Auto audiA4 = new Auto(godiste, model, marka, tipMenjaca, kilometraza, cijena);
+		
+		System.out.println(audiA4.toString());
+		
+		Auto.resetujKilometrazu(audiA4);
+		
+		System.out.println(audiA4.toString());
+		
+		
+		Auto[] nizAuta = new Auto[5];
+		nizAuta[1] = audiA4;
+		
+		System.out.println(nizAuta[1].toString());
 		
 		input.close();
 	}
@@ -210,7 +238,7 @@ public class Test {
 				proizvod = proizvod * i;
 			}
 			return proizvod;
-		}
+		} 
 		
 		// Naći proizvod prirodnih brojeva u intervalu od k do n koji su djeljivi sa 2 a nisu djeljivi sa 3.
 		public static int solution(int k, int n) {
@@ -262,13 +290,6 @@ public class Test {
 			return zbir;
 		}
 }
-
-
-
-
-
-
-
 
 
 
